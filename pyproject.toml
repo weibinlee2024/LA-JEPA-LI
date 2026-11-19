@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "la-jepa-li"
+version = "0.1.0"
+description = "LA-JEPA-LI: independent reproduction of La-JEPA for LIBERO / LIBERO-Plus / RoboTwin"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LA-JEPA-LI Authors" }]
+keywords = [
+  "la-jepa",
+  "world-models",
+  "flow-matching",
+  "robot-learning",
+  "libero",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch>=2.2",
+  "numpy>=1.24,<2.1",
+  "h5py>=3.10",
+  "hydra-core>=1.3",
+  "omegaconf>=2.3",
+  "transformers>=4.40",
+  "peft>=0.11",
+]
+
+[project.optional-dependencies]
+eval = [
+  "robosuite",
+]
+dev = [
+  "pytest>=7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/LA-JEPA-LI/LA-JEPA-LI"
+Paper = "https://arxiv.org/abs/2611.08156"
+
+[tool.setuptools.packages.find]
+include = ["lajepa*", "eval*"]
+
+[tool.setuptools.package-data]
+lajepa = ["py.typed"]
