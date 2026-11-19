@@ -1,0 +1,15 @@
+{
+  "source": "Correction rule from La-JEPA (arXiv:2611.08156, Section 5.2 and Appendix B, Tables 4 and 13). Non-language variants must receive the base LIBERO training instruction verbatim. The released evaluator appends perturbation parameters on 8493 of 10030 variants. Language variants keep their paraphrase. These two rows are the paper's examples; replace this file with the official per-variant map when github.com/mt-clemente/lajepa publishes it.",
+  "examples": [
+    {
+      "category": "camera",
+      "released": "pick up the alphabet soup and place it in the basket view 0 0 100 2 4 initstate 0",
+      "corrected": "pick up the alphabet soup and place it in the basket"
+    },
+    {
+      "category": "light",
+      "released": "pick up the black bowl between the plate and the ramekin and place it on the plate light 1",
+      "corrected": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    }
+  ]
+}
