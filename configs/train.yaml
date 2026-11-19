@@ -1,0 +1,26 @@
+# @package _global_
+defaults:
+  - model: s
+  - data: libero
+  - recipe: final
+  - _self_
+
+output_dir: runs/lajepa/${data.name}_${model.name}_${recipe.name}
+seed: 42
+max_steps: 150000
+batch_size: 32
+num_workers: 8
+resume: null
+log_every: 10
+save_every: 5000
+learning_rate: 5.0e-4
+weight_decay: 0.01
+max_grad_norm: 1.0
+mixed_precision: bf16
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: .
+  output_subdir: null

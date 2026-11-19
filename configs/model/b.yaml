@@ -1,0 +1,14 @@
+# @package model
+name: b
+hidden_dim: 768
+depth: 12
+num_heads: 12
+mlp_ratio: 4.0
+feature_dim: 1024
+text_dim: 1024
+horizon: 32
+gradient_checkpointing: false
+encoder_variant: vit_l
+encoder_checkpoint: ${oc.env:VJEPA_CHECKPOINT,checkpoints/vjepa2_1_vitl_dist_vitG_384.pt}
+text_encoder: google/flan-t5-large
+rope_grid: 16

@@ -1,0 +1,20 @@
+# @package recipe
+name: ablation_no_camera_dropout
+predict_future: true
+online_obs_encoder: true
+augment: true
+camera_dropout: 0.0
+text_dropout: 0.1
+proprio_dropout: 0.1
+ema_decay: 0.9999
+tau_ctx: 0.0
+num_inference_steps: 10
+execute_steps: 10
+noise_scale: 1.0
+lora_blocks: 8
+lora:
+  enabled: true
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  lr: 1.0e-4

@@ -1,0 +1,24 @@
+# @package data
+name: libero
+manifest: data/libero/manifest.json
+feature_store: data/libero/features
+stats_path: data/libero/stats.pt
+cameras: [agentview, wrist]
+eligible_cameras: [0, 1]
+action_dim: 7
+proprio_dim: 8
+image_size: 256
+vertical_fov_deg: 45.0
+temporal_encoding: tube_motion
+reduction: mean_pool
+reduction_factors: [2, 2]
+reduction_in_store: true
+global_batch_size: 128
+normalized_clamp: null
+gripper_indices: []
+suite_max_steps: [220, 280, 300, 520]
+execute_steps: 10
+lora_blocks_by_size:
+  s: 8
+  b: 8
+  l: 24

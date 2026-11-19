@@ -1,0 +1,23 @@
+# @package data
+name: robotwin
+manifest: data/robotwin/manifest.json
+feature_store: data/robotwin/features
+stats_path: data/robotwin/stats.pt
+cameras: [cam_high, cam_left_wrist, cam_right_wrist]
+eligible_cameras: [1, 2]
+action_dim: 14
+proprio_dim: 14
+image_size: 256
+vertical_fov_deg: 37.0
+temporal_encoding: tube_motion
+reduction: patch_group
+reduction_factors: [2, 4, 4]
+reduction_in_store: false
+global_batch_size: 400
+normalized_clamp: 5.0
+gripper_indices: [6, 13]
+execute_steps: 24
+lora_blocks_by_size:
+  s: 8
+  b: 8
+  l: 8
